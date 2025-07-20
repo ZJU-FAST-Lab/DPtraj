@@ -1,0 +1,12 @@
+<launch>
+
+
+<node pkg="plan_manage" type="plan_node" name="plan_node0" output="screen">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+</node>
+<node pkg="plan_manage" type="plan_node" name="plan_node1" output="screen">
+    <rosparam file="$(find plan_manage)/config/planning_v3.yaml" command="load" />
+</node>
+
+
+  </launch>

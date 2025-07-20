@@ -1,0 +1,8 @@
+<launch>
+
+
+
+  <!-- rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find random_map_generator)/rviz/default.rviz" required="true" />
+
+</launch>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>path_search</name>
+
+  <maintainer email="zhichaohan@zju.edu.cn">zhichaohan</maintainer>
+
+  <version>0.1.0</version>
+  <description> the path_search package</description>
+  <license>GPLV3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>tools</build_depend>
+  
+  <run_depend>roscpp</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>visualization_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>tools</run_depend>
+
+
+
+</package>
+

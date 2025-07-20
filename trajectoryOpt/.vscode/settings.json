@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.ipp": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp"
+    }
+}

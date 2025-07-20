@@ -1,0 +1,13 @@
+<launch>
+
+    <arg name="odom_topic" value="/ugv/odometry" />
+    <arg name="cmd_topic" value="/ugv/command" />
+
+    <rosparam command="load" file="$(find kinematics_simulator)/params/simulator.yaml" />
+
+    <node pkg="kinematics_simulator" type="kinematics_simulator_node" name="kinematics_simulator_node" output="screen" required="true">
+      <remap from ="~cmd" to="$(arg cmd_topic)"/>
+      <remap from="~odom" to="$(arg odom_topic)"/>
+    </node>
+
+</launch>
