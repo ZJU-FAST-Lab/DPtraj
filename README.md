@@ -1,4 +1,4 @@
-# Bilayer-based Trajectory Optimization
+# Double-Polynomial Trajectory Optimization
 
 ## 1. Setup
 
