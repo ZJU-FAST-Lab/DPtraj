@@ -1,4 +1,4 @@
-# Double-Polynomial Trajectory Optimization
+# Bi-level polynomial-based trajectory optimization
 
 ## 1. Setup
 
