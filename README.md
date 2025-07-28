@@ -33,4 +33,10 @@ If you find this repository helpful, please consider citing at least one of the 
 }
 ```
 
-The code will be divided into several modules and gradually open-sourced in different branches. Currently, you can switch to the `backend` branch to try our efficient singularity-free backend optimization. This branch includes a README to guide you through quick deployment.
+The code will be divided into several modules and gradually open-sourced in different branches. You can check out the following branches to try them out:
+
+*   **`backend`**: 
+    - Efficient singularity-free backend optimization.
+    
+*   **`frontend_deploy`**:
+    - Reproducing of learning-enhanced stable path planning.
