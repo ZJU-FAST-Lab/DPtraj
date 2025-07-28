@@ -17,7 +17,9 @@ To build this project, ensure that you have the following dependencies installed
 
 ### 1. LibTorch
 
-To facilitate your workflow, we have prepared the LibTorch 2.1.0 in **repo's Release**, **strongly advocating for its direct usage to circumvent version incompatibilities**.
+To facilitate your workflow, we have prepared the LibTorch 2.1.0 in [google drive](https://drive.google.com/file/d/1sW9OpkZalEzB3llRwt9eR9m20yW2g5IC/view?usp=drive_link).
+Please download, unzip and put it in `~/NeuralTraj`.
+
 
 Matching LibTorch and CUDA versions is **imperative** - mismatches will cause model inference failures. We provide pre-verified combinations below.
 The following combinations have been tested:
