@@ -62,7 +62,7 @@ Following the instructions in the [CUDA Toolkit download archive](https://develo
 ### 1. Unzip the project and go to the corresponding directory.
 
    ```bash
-   cd ~/STPP_DEPLOY/NeuralTraj
+   cd ~/NeuralTraj
    ```
 
 ### 2. Compile it.
@@ -76,7 +76,7 @@ Following the instructions in the [CUDA Toolkit download archive](https://develo
    Open a new terminal window and type:
 
    ```bash
-   cd ~/STPP_DEPLOY/NeuralTraj
+   cd ~/NeuralTraj
    source devel/setup.bash
    ```
 
