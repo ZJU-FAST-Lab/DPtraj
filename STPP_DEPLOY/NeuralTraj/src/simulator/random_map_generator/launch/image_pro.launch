@@ -1,0 +1,22 @@
+<launch>
+
+  <arg name="odom_topic" value="/ugv/odometry" />
+  <arg name="traj_topic" value="/planner/trajectory" />
+  <arg name="cmd_topic" value="/ugv/command" />
+  <arg name="sensor_topic" value="/ugv/laser" />
+  <arg name="mesh_topic" value="/ugv/mesh" />
+  <arg name="map_topic" value="/global_map" />
+
+  <rosparam command="load" file="$(find mpc_controller)/params/controller.yaml" />
+  <rosparam command="load" file="$(find kinematics_simulator)/params/simulator.yaml" />
+  <rosparam command="load" file="$(find random_map_generator)/params/map.yaml" />
+
+  <node pkg="random_map_generator" type="image_node" name="image_node" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+
+
+</launch>

@@ -1,0 +1,73 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(path_search)
+set(CMAKE_VERBOSE_MAKEFILE "true")
+set(CMAKE_BUILD_TYPE "Release")
+set(CMAKE_CXX_FLAGS "-std=c++17 -g ${TORCH_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -fPIC")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -Wall")
+list(APPEND CMAKE_PREFIX_PATH
+    "${CMAKE_SOURCE_DIR}/../libtorch"
+    /usr/local/cuda
+    )
+set(CUDA_TOOLKIT_ROOT_DIR "/usr/local/cuda")
+set(Torch_DIR "${CMAKE_SOURCE_DIR}/../libtorch/share/cmake/Torch")
+set(ENABLE_CUDA true)
+
+find_package(Torch REQUIRED)
+
+
+if(ENABLE_CUDA)
+  find_package(CUDA REQUIRED)
+  SET(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};-O3 -use_fast_math)
+  set(CUDA_NVCC_FLAGS 
+    -gencode arch=compute_74,code=sm_74
+  )
+endif()
+
+find_package(Eigen3 REQUIRED)
+find_package(ompl REQUIRED)
+
+
+
+find_package(PCL REQUIRED)
+find_package(catkin REQUIRED COMPONENTS
+    roscpp
+    visualization_msgs
+    std_msgs
+    tools
+    cv_bridge
+)
+
+include_directories(
+    include
+    ${catkin_INCLUDE_DIRS}
+    ${EIGEN3_INCLUDE_DIRS}
+    ${PCL_INCLUDE_DIRS}
+    ${TORCH_INCLUDE_DIRS}
+)
+
+
+#if this catkin packge's header is used by other packages, use catkin_package to
+#declare the include directories of this package.
+catkin_package(
+    INCLUDE_DIRS include 
+)
+
+add_library(kino_astar
+    src/kino_astar.cpp
+)
+target_link_libraries(kino_astar 
+    ompl
+    ${catkin_LIBRARIES}
+    ${TORCH_LIBRARIES}
+
+)
+add_library(nn_pathsearch
+    src/nnPath.cpp
+)
+target_link_libraries(nn_pathsearch 
+    ${catkin_LIBRARIES}
+   ${TORCH_LIBRARIES}
+   ompl
+)
+

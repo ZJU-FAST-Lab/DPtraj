@@ -1,0 +1,68 @@
+# trajectory Optimizer
+mini_T:                   0.05
+wei_time_:                10.0
+
+kmax:                     2.0 #2.0+0.1 1.5
+kdotmax:                  10000.0
+cons_eps_:                0.1
+
+
+
+vmax:                     2.0
+latAccmax:                1.5
+lonAccmax:                1.5
+accRatemax:               1.5
+phimax: 0.9
+omegamax: 100000.0 #0.5-0.02
+
+
+
+traj_res:                 8
+past:                     3
+rho:                      1.0
+rho_max:                  1000.0
+gamma:                    1.0
+mem_size:                 256
+g_epsilon:                1.0e-3
+min_step:                 1.0e-32
+delta:                    1.0e-3
+max_iterations:           1000
+amlMaxIter:               20
+
+penaWei:                  1000.0
+esdfWei:                  10000.0
+
+pieceTime:                1.0
+miniS:                    0.1
+safeMargin:               0.3 #0.15+0.05
+conpts:                   [[0.15, 0.0], [0.3, -0.00]]
+# 
+
+
+#map
+mapRes:                   0.1
+mapX:                     20.0
+mapY:                     20.0
+expandSize:               0 
+wheel_base:               0.6
+horizon_:                 50.0
+#res res res
+lambda_heu_:              2.0
+
+
+yaw_resolution_:          1.57
+steer_res:                0.5
+allocate_num_:            1000000
+
+check_num_:               4
+step_arc:                 0.3
+checkl:                   0.1
+
+max_seach_time:           1000.0
+non_siguav:               0.0
+backW:                    2.0
+useDP:                    true
+isdebug:                  false
+isfixGear:                false
+isVis:                    false
+enable_shot:              true

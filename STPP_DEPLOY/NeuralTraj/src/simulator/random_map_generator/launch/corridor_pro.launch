@@ -1,0 +1,97 @@
+<launch>
+
+  <arg name="odom_topic" value="/ugv/odometry" />
+  <arg name="traj_topic" value="/planner/trajectory" />
+  <arg name="cmd_topic" value="/ugv/command" />
+  <arg name="sensor_topic" value="/ugv/laser" />
+  <arg name="mesh_topic" value="/ugv/mesh" />
+  <arg name="map_topic" value="/global_map" />
+
+  <rosparam command="load" file="$(find mpc_controller)/params/controller.yaml" />
+  <rosparam command="load" file="$(find kinematics_simulator)/params/simulator.yaml" />
+  <rosparam command="load" file="$(find random_map_generator)/params/map.yaml" />
+
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node1" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="1" />
+    <param name="end_id" type="int" value="25" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node2" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="26" />
+    <param name="end_id" type="int" value="50" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node3" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="51" />
+    <param name="end_id" type="int" value="75" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node4" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="76" />
+    <param name="end_id" type="int" value="100" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node5" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="101" />
+    <param name="end_id" type="int" value="125" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+
+
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node6" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="126" />
+    <param name="end_id" type="int" value="150" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node7" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="151" />
+    <param name="end_id" type="int" value="175" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node8" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="176" />
+    <param name="end_id" type="int" value="200" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node9" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="201" />
+    <param name="end_id" type="int" value="225" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+  <node pkg="random_map_generator" type="corridor_pro_node" name="corridor_pro_node10" output="screen" required="true">
+    <rosparam file="$(find plan_manage)/config/planning.yaml" command="load" />
+    <param name="start_id" type="int" value="226" />
+    <param name="end_id" type="int" value="250" />
+    <remap from ="~odom" to="$(arg odom_topic)"/>
+    <remap from="~local_cloud" to="$(arg sensor_topic)"/>
+    <remap from="~global_cloud" to="$(arg map_topic)"/> 
+  </node>
+
+</launch>

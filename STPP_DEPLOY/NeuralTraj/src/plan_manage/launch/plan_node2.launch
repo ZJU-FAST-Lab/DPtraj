@@ -1,0 +1,11 @@
+<launch>
+
+
+<node pkg="plan_manage" type="plan_node" name="plan_node" output="screen">
+    <rosparam file="$(find plan_manage)/config/planning_office.yaml" command="load" />
+    <param name="scene" type="str" value="office" />
+</node>
+
+
+
+  </launch>

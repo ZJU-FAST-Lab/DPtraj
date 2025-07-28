@@ -1,0 +1,24 @@
+<launch>
+
+  <arg name="odom_topic" value="/ugv/odometry" />
+  <arg name="cmd_topic" value="/ugv/command" />
+  <arg name="sensor_topic" value="/ugv/laser" />
+  <arg name="mesh_topic" value="/ugv/mesh" />
+  <arg name="map_topic" value="/global_map" />
+
+  <rosparam command="load" file="$(find kinematics_simulator)/params/simulator.yaml" />
+  <rosparam command="load" file="$(find random_map_generator)/params/map.yaml" />
+
+
+   
+  <node pkg="kinematics_simulator" type="kinematics_simulator_node" name="kinematics_simulator_node" output="screen" required="true">
+    <remap from ="~cmd" to="$(arg cmd_topic)"/>
+    <remap from="~odom" to="$(arg odom_topic)"/>
+    <remap from="~mesh" to="$(arg mesh_topic)"/>
+  </node>
+
+
+  <!-- rviz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find random_map_generator)/rviz/default.rviz" required="true" />
+
+</launch>
