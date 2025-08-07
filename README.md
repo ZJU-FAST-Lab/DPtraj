@@ -39,4 +39,7 @@ The code will be divided into several modules and gradually open-sourced in diff
     - Efficient singularity-free backend optimization.
     
 *   **`frontend_deploy`**:
-    - Reproducing of learning-enhanced stable path planning.
+    - Deployment demo of learning-enhanced stable path planning.
+ 
+*   **`frontend_training`**:
+    - Training demo of learning-enhanced stable path planning.
