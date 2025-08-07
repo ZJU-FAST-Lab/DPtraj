@@ -29,7 +29,7 @@ python PathNet/train_ours.py
 ```
 
 ### 2.3 Visualizing the Results
-Once the model converges, you can visualize it:
+Once the model converges, you can visualize it. A pretrained model is provided [here](https://drive.google.com/file/d/13o9flu4yo451FzMRhiEFF8PYq2dcNoDo/view?usp=sharing):
 
 ```bash
 cd ~/DPtraj/deepPathPlan
