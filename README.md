@@ -56,7 +56,7 @@ Following the instructions in the [CUDA Toolkit download archive](https://develo
 ### 3. OMPL
 
    ```bash
-   apt-get install libompl-dev ompl-demos
+   sudo apt-get install libompl-dev ompl-demos
    ```
 
 ## 2. Use the pre-trained model and test it in ROS.
@@ -64,7 +64,7 @@ Following the instructions in the [CUDA Toolkit download archive](https://develo
 ### 1. Unzip the project and go to the corresponding directory.
 
    ```bash
-   cd ~/NeuralTraj
+   cd ~/DPtraj/NeuralTraj
    ```
 
 ### 2. Compile it.
@@ -78,7 +78,7 @@ Following the instructions in the [CUDA Toolkit download archive](https://develo
    Open a new terminal window and type:
 
    ```bash
-   cd ~/NeuralTraj
+   cd ~/DPtraj/NeuralTraj
    source devel/setup.bash
    ```
 
