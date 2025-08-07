@@ -29,7 +29,7 @@ python PathNet/train_ours.py
 ```
 
 ### 2.3 Visualizing the Results
-Once the model converges, you can visualize it. A pretrained model is provided [here](https://drive.google.com/file/d/13o9flu4yo451FzMRhiEFF8PYq2dcNoDo/view?usp=sharing):
+Once the model converges, you can visualize it:
 
 ```bash
 cd ~/DPtraj/deepPathPlan
@@ -42,7 +42,7 @@ python PathNet/visualizer_tojit.py
 To check similar results in table Table.S1 and Fig.S2 of Supplementary Materials, we provide:<br>
 1. Detailed eval log [`model.pkl.txt`](deepPathPlan/models/model.pkl.txt).
 2. Detailed training log [`model.pklStep.txt`](deepPathPlan/models/model.pklStep.txt).
-3. Reproduced model [`model.pkl`](deepPathPlan/models/model.pkl).
+3. Reproduced model [`model.pkl`](https://drive.google.com/file/d/13o9flu4yo451FzMRhiEFF8PYq2dcNoDo/view?usp=sharing).
 
 > **Note:**  
 > Please note that slight differences in the results compared to the paper are normal, due to variations in training configuration and package versions.<br>
