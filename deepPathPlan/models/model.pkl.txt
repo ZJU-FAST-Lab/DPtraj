@@ -1,0 +1,280 @@
+epoch0 lr: 0.0001
+wei_arc: tensor(0.)
+wei_uni: tensor(0.)
+wei_pos: tensor(5.)
+wei_hol: tensor(0.)
+wei_rot: tensor(5.)
+wei_cur: tensor(0.)
+wei_safety: tensor(0.)
+wei_rsm: tensor(0.)
+wei_aors: tensor(1.)
+--average loss: 8.06198415877395
+--average arcloss: 0.0
+--average holloss: 0.0
+--average uniloss: 0.0
+--average posloss: 4.5134706898332615
+--average rotloss: 1.5049493015374618
+--average curloss: 0.0
+--average rsmloss: 0.0
+--average safeloss: 0.0
+--average anchors: 2.043564165656325
+epoch1 lr: 0.0001
+wei_arc: tensor(0.0500)
+wei_uni: tensor(10.)
+wei_pos: tensor(5.)
+wei_hol: tensor(10.)
+wei_rot: tensor(5.)
+wei_cur: tensor(0.)
+wei_safety: tensor(0.)
+wei_rsm: tensor(0.)
+wei_aors: tensor(1.)
+--average loss: 5.019177352205206
+--average arcloss: 0.0038839441434178044
+--average holloss: 0.05458394393475797
+--average uniloss: 0.010759122569141613
+--average posloss: 2.6638446151785975
+--average rotloss: 1.0360660213038153
+--average curloss: 0.0
+--average rsmloss: 0.0
+--average safeloss: 0.0
+--average anchors: 1.2500397054523207
+epoch2 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(100.)
+wei_rot: tensor(5.)
+wei_cur: tensor(5.)
+wei_safety: tensor(0.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 4.68895891328937
+--average arcloss: 0.008183894988604497
+--average holloss: 0.13029613115596253
+--average uniloss: 0.08588701316743295
+--average posloss: 1.8579194024380217
+--average rotloss: 0.9269288579124396
+--average curloss: 0.012219247905045872
+--average rsmloss: 0.7044051234239879
+--average safeloss: 0.0
+--average anchors: 0.9631192421936906
+epoch3 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(200.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(0.)
+wei_rsm: tensor(0.2500)
+wei_aors: tensor(1.)
+--average loss: 4.745125634601187
+--average arcloss: 0.026877454563553654
+--average holloss: 0.18418890316184103
+--average uniloss: 0.10297594526055419
+--average posloss: 1.884187303124454
+--average rotloss: 0.9198017363007683
+--average curloss: 0.3988196368315505
+--average rsmloss: 0.25973377930722596
+--average safeloss: 0.0
+--average anchors: 0.9685408772915417
+epoch4 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 19.731002670851915
+--average arcloss: 0.20979579106313714
+--average holloss: 1.5253499871130065
+--average uniloss: 0.15299846975775713
+--average posloss: 3.273296459084839
+--average rotloss: 1.174490636924856
+--average curloss: 0.9095049503192606
+--average rsmloss: 1.3547295072078238
+--average safeloss: 9.375466897855645
+--average anchors: 1.755369973167617
+epoch5 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 17.35771486355118
+--average arcloss: 0.24915402417057045
+--average holloss: 1.4544789069733575
+--average uniloss: 0.16270333445734447
+--average posloss: 3.7460585601266674
+--average rotloss: 1.2475770550933594
+--average curloss: 0.8845004071528924
+--average rsmloss: 1.265900521613464
+--average safeloss: 6.43820409340887
+--average anchors: 1.909137958277162
+epoch6 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 17.764582541745977
+--average arcloss: 0.25872511512643176
+--average holloss: 1.4364092676743947
+--average uniloss: 0.1724707286891623
+--average posloss: 4.201128017491688
+--average rotloss: 1.3279298406702333
+--average curloss: 0.8454181791530256
+--average rsmloss: 1.226171281884782
+--average safeloss: 6.226113324041587
+--average anchors: 2.0702167910009495
+epoch7 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 15.785695028971995
+--average arcloss: 0.2375121480664727
+--average holloss: 1.2241923052933459
+--average uniloss: 0.16861708735277775
+--average posloss: 3.8096637190050124
+--average rotloss: 1.2856888858784017
+--average curloss: 0.8123444865545019
+--average rsmloss: 1.1663268719570383
+--average safeloss: 5.160833306864611
+--average anchors: 1.9205162199513073
+epoch8 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 15.425916258546668
+--average arcloss: 0.22056228557643467
+--average holloss: 1.132496457373267
+--average uniloss: 0.17018246243297694
+--average posloss: 3.880802043723639
+--average rotloss: 1.3023101880088956
+--average curloss: 0.7612168637050438
+--average rsmloss: 1.1109563653564885
+--average safeloss: 4.892489986450564
+--average anchors: 1.9548996071075917
+epoch9 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 14.73867193576967
+--average arcloss: 0.2298927892499185
+--average holloss: 1.0485475392665728
+--average uniloss: 0.16941489148385178
+--average posloss: 3.8030924390932785
+--average rotloss: 1.295587372976916
+--average curloss: 0.7343074503939482
+--average rsmloss: 1.085112362489114
+--average safeloss: 4.461452936496554
+--average anchors: 1.9112641553122238
+epoch10 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 14.350036520212603
+--average arcloss: 0.24931309405859187
+--average holloss: 1.0164944709404795
+--average uniloss: 0.17092974116608498
+--average posloss: 3.7293495974198585
+--average rotloss: 1.2872617204054895
+--average curloss: 0.6995111909340379
+--average rsmloss: 1.0526712644850285
+--average safeloss: 4.251338293904919
+--average anchors: 1.8931671491686801
+epoch11 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 14.183135204845005
+--average arcloss: 0.2666033199641007
+--average holloss: 0.9918856180740813
+--average uniloss: 0.17218418529271629
+--average posloss: 3.803230342014174
+--average rotloss: 1.2902717933210412
+--average curloss: 0.6645574028382917
+--average rsmloss: 1.032610342568397
+--average safeloss: 4.078076377394617
+--average anchors: 1.8837158215861363
+epoch12 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 14.16942340013811
+--average arcloss: 0.2577934196032968
+--average holloss: 0.9688295220033568
+--average uniloss: 0.1727902776355446
+--average posloss: 3.8484853654346804
+--average rotloss: 1.2992724725367106
+--average curloss: 0.6492055289991424
+--average rsmloss: 0.9965988802249274
+--average safeloss: 4.0513577184188625
+--average anchors: 1.9250902141703516
+epoch13 lr: 1e-05
+wei_arc: tensor(0.5000)
+wei_uni: tensor(100.)
+wei_pos: tensor(5.)
+wei_hol: tensor(500.)
+wei_rot: tensor(5.)
+wei_cur: tensor(500.)
+wei_safety: tensor(500.)
+wei_rsm: tensor(0.5000)
+wei_aors: tensor(1.)
+--average loss: 14.366591612820406
+--average arcloss: 0.2929780938732128
+--average holloss: 0.9725297783308605
+--average uniloss: 0.1773672202894107
+--average posloss: 3.9593081795852783
+--average rotloss: 1.3238227908304048
+--average curloss: 0.6377065901636771
+--average rsmloss: 0.993676309513786
+--average safeloss: 4.036436664704354
+--average anchors: 1.9727659895225933

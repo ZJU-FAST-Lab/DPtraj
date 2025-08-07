@@ -1,42 +1,54 @@
-# DPtraj
-A double-polynomial discription for trajectory interfaced with learning-based front end.
+# Stable-Time Path Planning
 
-This work is presented in the paper: Hierarchically Depicting Vehicle Trajectory with Stability in Complex Environments, published in Science Robotics.
+## 1. Installation
 
-The backend trajectory optimizer improvements build upon our previous work (available at https://github.com/ZJU-FAST-Lab/Dftpav), where singularity issues were addressed. 
-
-Moreover, the approach has recently been extended and applied to more complex multi-joint robotic platforms (see https://github.com/Tracailer/Tracailer).
-
-
-If you find this repository helpful, please consider citing at least one of the following papers:
-
-```bibtex
-@article{han2025hierarchically,
-  title={Hierarchically depicting vehicle trajectory with stability in complex environments},
-  author={Han, Zhichao and Tian, Mengze and Gongye, Zaitian and Xue, Donglai and Xing, Jiaxi and Wang, Qianhao and Gao, Yuman and Wang, Jingping and Xu, Chao and Gao, Fei},
-  journal={Science Robotics},
-  volume={10},
-  number={103},
-  pages={eads4551},
-  year={2025},
-  publisher={American Association for the Advancement of Science}
-}
-@article{han2023efficient,
-  title={An efficient spatial-temporal trajectory planner for autonomous vehicles in unstructured environments},
-  author={Han, Zhichao and Wu, Yuwei and Li, Tong and Zhang, Lu and Pei, Liuao and Xu, Long and Li, Chengyang and Ma, Changjia and Xu, Chao and Shen, Shaojie and others},
-  journal={IEEE Transactions on Intelligent Transportation Systems},
-  volume={25},
-  number={2},
-  pages={1797--1814},
-  year={2023},
-  publisher={IEEE}
-}
+To reproduce our ablation results, please install [Conda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/linux.html#) environment on a Linux machine with Nvidia GPU.<br>
+You may need to install the following apt packages:
+```bash
+sudo apt-get install libboost-dev
+```
+Please config the conda environment:
+```bash
+cd ~/DPtraj/deepPathPlan
+conda create -n <your_env_name> python=3.8
+conda activate <your_env_name>
+pip install -r requirements.txt
 ```
 
-The code will be divided into several modules and gradually open-sourced in different branches. You can check out the following branches to try them out:
 
-*   **`backend`**: 
-    - Efficient singularity-free backend optimization.
-    
-*   **`frontend_deploy`**:
-    - Reproducing of learning-enhanced stable path planning.
+## 2. Reproducing the Model
+### 2.1 Download Training Data
+Please download, unzip and place the [Data](https://drive.google.com/file/d/1uuQsWTBYMzHI0RcXgpFg6Ft-3lf6-fRD/view?usp=drive_link) as the directory `~/totalData`.
+
+### 2.2 Training
+You can easily retrain the model by running `PathNet/train_ours.py`:
+
+```bash
+cd ~/DPtraj/deepPathPlan
+python PathNet/train_ours.py
+```
+
+### 2.3 Visualizing the Results
+Once the model converges, you can visualize it:
+
+```bash
+cd ~/DPtraj/deepPathPlan
+python PathNet/visualizer_tojit.py
+```
+
+> **Note:** This script will utilize `torch.jit.trace` to generate a model file that can be directly invoked by LibTorch, allowing you to seamlessly integrate it into our ROS program.
+
+## 3. Checkout our experiment logs
+To check similar results in table Table.S1 and Fig.S2 of Supplementary Materials, we provide:<br>
+1. Detailed eval log [`model.pkl.txt`](deepPathPlan/models/model.pkl.txt).
+2. Detailed training log [`model.pklStep.txt`](deepPathPlan/models/model.pklStep.txt).
+3. Reproduced model [`model.pkl`](deepPathPlan/models/model.pkl).
+
+> **Note:**  
+> Please note that slight differences in the results compared to the paper are normal, due to variations in training configuration and package versions.<br>
+> For example, the batch size (`bz`) is set to 32 in this repo for easier reproduction on GPUs with 16 GB memory (the bz used in the paper is 64 based on 32 GB memory).  
+
+
+## 4. Contact
+
+If you have any questions, please feel free to contact Zhichao HAN (<zhichaohan@zju.edu.cn>) or Mengze TIAN(<mengze.tian@epfl.ch>).
