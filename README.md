@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 ## 2. Reproducing the Model
 ### 2.1 Download Training Data
-Please download, unzip and place the [Data](https://drive.google.com/file/d/1uuQsWTBYMzHI0RcXgpFg6Ft-3lf6-fRD/view?usp=drive_link) as the directory `~/totalData`.
+Please download, unzip and place the [Data](https://drive.google.com/file/d/1uuQsWTBYMzHI0RcXgpFg6Ft-3lf6-fRD/view?usp=drive_link) as the directory `~/totalData`. The completed dataset is suggested for reproducing the model as we found rich data makes performances better.
 
 ### 2.2 Training
 You can easily retrain the model by running `PathNet/train_ours.py`:
