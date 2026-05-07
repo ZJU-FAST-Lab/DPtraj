@@ -244,7 +244,7 @@ void PlanManager::process(const ros::TimerEvent &){
                 refined_angles, &gridMap,  config_, refined_singuals, vis_tool);
                 double t4 = ros::Time::now().toSec();
 
-                printf("\033[32mNeural Network path finder time!,time(ms)=%5.3f \n\033[0m", (t2-t1) * 1000.0-1.0);
+                printf("\033[32mNeural Network path finder time!,time(ms)=%5.3f \n\033[0m", (t2-t1) * 1000.0);
                 printf("\033[32mBackend trajectory optimizer time!,time(ms)=%5.3f \n\033[0m", (t4-t3) * 1000.0);
                 
             }
